@@ -1,0 +1,28 @@
+<?php
+/**@file
+ * Implementation of hook_install().
+ */
+function miners_install() {
+  //Create miners lexicon
+  $lexicon = array(
+   'lexicon' => 'miners_lexicon',
+   'description' => 'this is miners VoIP Voice lexicon',
+  );
+  voipvoice_create_lexicon($lexicon);
+  //Create miners voices
+  $voice1 = array(
+   'name' => 'miners',
+   'gender' => 'man',
+   'description' => 'This is man English miners voice.',
+   'language' => 'en',
+   'lexicon' => 'miners_lexicon',
+  );
+  voipvoice_create_voice($voice1);
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function miners_uninstall() {
+ voipvoice_delete_lexicon('miners_lexicon');
+}

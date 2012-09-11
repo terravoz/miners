@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file Provides VoIP Drupal functionality for the Miners project
+ */
+
+include_once('miners.scripts.inc');
+

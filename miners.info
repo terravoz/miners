@@ -1,0 +1,8 @@
+core = "6.x"
+description = "Provides VoIP Drupal scripts for the Miners project."
+name = "Miners"
+dependencies[] = voipvoice
+package = "miners"
+project = "miners"
+
+
